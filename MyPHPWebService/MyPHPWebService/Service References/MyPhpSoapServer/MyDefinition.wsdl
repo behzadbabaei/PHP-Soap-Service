@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:myTns" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MyDefinition" targetNamespace="urn:myTns" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="sumincoming">
+    <wsdl:part name="sumnum1" type="xsd:int" />
+    <wsdl:part name="sumnum2" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="sumoutgoing">
+    <wsdl:part name="anssum" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="subincoming">
+    <wsdl:part name="subnum1" type="xsd:int" />
+    <wsdl:part name="subnum2" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="suboutgoing">
+    <wsdl:part name="anssub" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="mulincoming">
+    <wsdl:part name="mulnum1" type="xsd:int" />
+    <wsdl:part name="mulnum2" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="muloutgoing">
+    <wsdl:part name="ansmul" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="divincoming">
+    <wsdl:part name="divnum1" type="xsd:int" />
+    <wsdl:part name="divnum2" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="divoutgoing">
+    <wsdl:part name="ansdiv" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="helloincoming">
+    <wsdl:part name="name" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="hellooutgoing">
+    <wsdl:part name="response" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="MyPortType">
+    <wsdl:operation name="SumData">
+      <wsdl:input message="tns:sumincoming" />
+      <wsdl:output message="tns:sumoutgoing" />
+    </wsdl:operation>
+    <wsdl:operation name="SubData">
+      <wsdl:input message="tns:subincoming" />
+      <wsdl:output message="tns:suboutgoing" />
+    </wsdl:operation>
+    <wsdl:operation name="MulData">
+      <wsdl:input message="tns:mulincoming" />
+      <wsdl:output message="tns:muloutgoing" />
+    </wsdl:operation>
+    <wsdl:operation name="DivData">
+      <wsdl:input message="tns:divincoming" />
+      <wsdl:output message="tns:divoutgoing" />
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <wsdl:input message="tns:helloincoming" />
+      <wsdl:output message="tns:hellooutgoing" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyBinding" type="tns:MyPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SumData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MulData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivData">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <soap12:operation soapAction="" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="urn:myInputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="urn:myOutputNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="MyPort" binding="tns:MyBinding">
+      <soap12:address location="http://localhost/webservices/simple/testserver.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

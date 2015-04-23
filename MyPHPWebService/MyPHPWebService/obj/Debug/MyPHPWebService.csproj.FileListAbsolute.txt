@@ -1,0 +1,9 @@
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\bin\Debug\MyPHPWebService.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\bin\Debug\MyPHPWebService.exe
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\bin\Debug\MyPHPWebService.pdb
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.Form1.resources
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.exe
+c:\users\admin\documents\visual studio 2013\Projects\MyPHPWebService\MyPHPWebService\obj\Debug\MyPHPWebService.pdb
